@@ -54,7 +54,7 @@ static NSString *sjKeyboardTypeKey = @"sjKeyboardTypeKey";
             };
             numberInputView.textFieldShouldDelete = ^{
                 BOOL canEditor = YES;
-                if ([self.delegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)]) {
+                if ([self.delegate respondsToSelector:@selector(textField:shouldChangeCharactersInRange:replacementString:)] && self.text.length) {
                     canEditor = [self.delegate textField:self shouldChangeCharactersInRange:NSMakeRange(self.text.length - 1, 1) replacementString:@""];
                 }
                 if (canEditor) {

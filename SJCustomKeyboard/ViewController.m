@@ -12,7 +12,6 @@
 
 @interface ViewController ()<UITextFieldDelegate>
 
-@property (nonatomic, strong) UITextField *textField;
 
 @end
 
@@ -22,13 +21,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(20, 100, SJSCREEN_WIDTH - 40, 40)];
-    self.textField.placeholder = @"input";
-    self.textField.borderStyle = UITextBorderStyleBezel;
-    self.textField.delegate = self;
-    [self.view addSubview:self.textField];
+    UITextField *numberTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, 100, SJSCREEN_WIDTH - 40, 40)];
+    numberTextField.placeholder = @"input number";
+    numberTextField.borderStyle = UITextBorderStyleBezel;
+    numberTextField.delegate = self;
+    [self.view addSubview:numberTextField];
+    numberTextField.sjKeyboardType = SJKeyboardTypeNumber;
     
-    self.textField.sjKeyboardType = SJKeyboardTypeNumber;
+    UITextField *safeNumberTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, 160, SJSCREEN_WIDTH - 40, 40)];
+    safeNumberTextField.placeholder = @"input safe number";
+    safeNumberTextField.borderStyle = UITextBorderStyleBezel;
+    safeNumberTextField.delegate = self;
+    [self.view addSubview:safeNumberTextField];
+    safeNumberTextField.sjKeyboardType = SJKeyboardTypeSafeNumber;
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string

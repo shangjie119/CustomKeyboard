@@ -33,6 +33,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) void (^textFieldShouldClear)(void);
 @property (nonatomic, copy) void (^textFieldShouldReturn)(void);
 
+// 更新安全键盘布局
+- (void)updateSaveNumberButton;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -107,6 +107,101 @@
     [self.confirmButton addTarget:self action:@selector(confirmButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)updateSaveNumberButton
+{
+    NSMutableArray *numberArray = [NSMutableArray arrayWithObjects:@"0", @"1", @"2", @"3", @"4", @"5", @"6", @"7", @"8", @"9", nil];
+    
+    [self.inputButtonOne addTarget:self action:@selector(inputButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.inputButtonOne setBackgroundImage:[self imageColor:SJColorFromHex(0xE7E8E9)] forState:UIControlStateHighlighted];
+    {
+        NSInteger index = arc4random() % 10;
+        [self.inputButtonOne setTitle:numberArray[index] forState:UIControlStateNormal];
+        self.inputButtonOne.tag = 7700 + [numberArray[index] integerValue];
+        [numberArray removeObjectAtIndex:index];
+    }
+    
+    [self.inputButtonTwo addTarget:self action:@selector(inputButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.inputButtonTwo setBackgroundImage:[self imageColor:SJColorFromHex(0xE7E8E9)] forState:UIControlStateHighlighted];
+    {
+        NSInteger index = arc4random() % 9;
+        [self.inputButtonTwo setTitle:numberArray[index] forState:UIControlStateNormal];
+        self.inputButtonTwo.tag = 7700 + [numberArray[index] integerValue];
+        [numberArray removeObjectAtIndex:index];
+    }
+    
+    [self.inputButtonThree addTarget:self action:@selector(inputButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.inputButtonThree setBackgroundImage:[self imageColor:SJColorFromHex(0xE7E8E9)] forState:UIControlStateHighlighted];
+    {
+        NSInteger index = arc4random() % 8;
+        [self.inputButtonThree setTitle:numberArray[index] forState:UIControlStateNormal];
+        self.inputButtonThree.tag = 7700 + [numberArray[index] integerValue];
+        [numberArray removeObjectAtIndex:index];
+    }
+    
+    [self.inputButtonFour addTarget:self action:@selector(inputButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.inputButtonFour setBackgroundImage:[self imageColor:SJColorFromHex(0xE7E8E9)] forState:UIControlStateHighlighted];
+    {
+        NSInteger index = arc4random() % 7;
+        [self.inputButtonFour setTitle:numberArray[index] forState:UIControlStateNormal];
+        self.inputButtonFour.tag = 7700 + [numberArray[index] integerValue];
+        [numberArray removeObjectAtIndex:index];
+    }
+    
+    [self.inputButtonFive addTarget:self action:@selector(inputButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.inputButtonFive setBackgroundImage:[self imageColor:SJColorFromHex(0xE7E8E9)] forState:UIControlStateHighlighted];
+    {
+        NSInteger index = arc4random() % 6;
+        [self.inputButtonFive setTitle:numberArray[index] forState:UIControlStateNormal];
+        self.inputButtonFive.tag = 7700 + [numberArray[index] integerValue];
+        [numberArray removeObjectAtIndex:index];
+    }
+    
+    [self.inputButtonSix addTarget:self action:@selector(inputButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.inputButtonSix setBackgroundImage:[self imageColor:SJColorFromHex(0xE7E8E9)] forState:UIControlStateHighlighted];
+    {
+        NSInteger index = arc4random() % 5;
+        [self.inputButtonSix setTitle:numberArray[index] forState:UIControlStateNormal];
+        self.inputButtonSix.tag = 7700 + [numberArray[index] integerValue];
+        [numberArray removeObjectAtIndex:index];
+    }
+    
+    [self.inputButtonSeven addTarget:self action:@selector(inputButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.inputButtonSeven setBackgroundImage:[self imageColor:SJColorFromHex(0xE7E8E9)] forState:UIControlStateHighlighted];
+    {
+        NSInteger index = arc4random() % 4;
+        [self.inputButtonSeven setTitle:numberArray[index] forState:UIControlStateNormal];
+        self.inputButtonSeven.tag = 7700 + [numberArray[index] integerValue];
+        [numberArray removeObjectAtIndex:index];
+    }
+    
+    [self.inputButtonEight addTarget:self action:@selector(inputButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.inputButtonEight setBackgroundImage:[self imageColor:SJColorFromHex(0xE7E8E9)] forState:UIControlStateHighlighted];
+    {
+        NSInteger index = arc4random() % 3;
+        [self.inputButtonEight setTitle:numberArray[index] forState:UIControlStateNormal];
+        self.inputButtonEight.tag = 7700 + [numberArray[index] integerValue];
+        [numberArray removeObjectAtIndex:index];
+    }
+    
+    [self.inputButtonNine addTarget:self action:@selector(inputButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.inputButtonNine setBackgroundImage:[self imageColor:SJColorFromHex(0xE7E8E9)] forState:UIControlStateHighlighted];
+    {
+        NSInteger index = arc4random() % 2;
+        [self.inputButtonNine setTitle:numberArray[index] forState:UIControlStateNormal];
+        self.inputButtonNine.tag = 7700 + [numberArray[index] integerValue];
+        [numberArray removeObjectAtIndex:index];
+    }
+    
+    [self.inputButtonZero addTarget:self action:@selector(inputButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.inputButtonZero setBackgroundImage:[self imageColor:SJColorFromHex(0xE7E8E9)] forState:UIControlStateHighlighted];
+    {
+        NSInteger index = 0;
+        [self.inputButtonZero setTitle:numberArray[index] forState:UIControlStateNormal];
+        self.inputButtonZero.tag = 7700 + [numberArray[index] integerValue];
+        [numberArray removeObjectAtIndex:index];
+    }
+}
+
 // 点击数字 和 .
 - (void)inputButtonClicked:(UIButton *)button
 {

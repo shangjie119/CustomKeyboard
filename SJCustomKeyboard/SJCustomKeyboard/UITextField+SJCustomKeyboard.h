@@ -13,8 +13,9 @@
 
 typedef NS_ENUM(NSUInteger, SJKeyboardType)
 {
-    SJKeyboardTypeDefault,  // 使用默认键盘
-    SJKeyboardTypeNumber    // 使用自定义数字键盘
+    SJKeyboardTypeDefault,      // 使用默认键盘
+    SJKeyboardTypeNumber,       // 使用自定义数字键盘
+    SJKeyboardTypeSafeNumber,   // 使用自定义数字安全键盘
     // 还可以根据需求 自定义其他样式...
 };
 

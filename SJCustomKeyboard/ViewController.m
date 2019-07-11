@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+     
     UITextField *numberTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, 100, SJSCREEN_WIDTH - 40, 40)];
     numberTextField.placeholder = @"input number";
     numberTextField.borderStyle = UITextBorderStyleBezel;
